@@ -12,6 +12,10 @@ var contact = function (req, res) {
 	var email = req.body.email;
 	var content = req.body.content;
 
+	console.log(name);
+	console.log(email);
+	console.log(content);
+
 	var smtpTransport = nodemailer.createTransport('SMTP', {
 		service: 'Gmail',
 		auth: {
