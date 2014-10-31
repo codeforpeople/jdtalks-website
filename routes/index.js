@@ -29,9 +29,11 @@ var contact = function (req, res) {
 		to: 'contact@jdl.ro',
 		subject: 'JDL enquiry from ' + name + ' [' + email + '] [sent via form]',
 		text: content
+	}, function (err) {
+		if (err) console.log(err);
+		res.render('contact', { err: err });
 	});
 
-	res.render('contact');
 };
 
 router.post('/contact', contact);
