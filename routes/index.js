@@ -16,8 +16,8 @@ var contact = function (req, res) {
 	console.log(email);
 	console.log(content);
 
-	var smtpTransport = nodemailer.createTransport('SMTP', {
-		service: 'Gmail',
+	var smtpTransport = nodemailer.createTransport({
+		service: 'gmail',
 		auth: {
 			user: 'contact@jdl.ro',
 			pass: process.env.CONTACT_DETAILS
