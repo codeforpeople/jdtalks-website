@@ -1,0 +1,291 @@
+body, html {
+	margin: 0;
+	font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+	width: 100%;
+}
+
+/* Navigation */
+
+.navbar.navbar-default {
+	background: rgba(0, 0, 0, .8);
+	border: none;
+	z-index: 100;
+}
+
+.collapse.navbar-collapse ul {
+	width: 100%;
+	text-align: center;
+}
+
+.collapse.navbar-collapse ul li {
+	float: none;
+	display: inline-block;
+}
+
+.nav.navbar-nav li a {
+	padding: 25px 30px;
+	color: #ccc;
+	font-size: 22px;
+	text-transform: uppercase;
+	z-index: 100;
+}
+
+.nav.navbar-nav li a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav.navbar-nav li a:hover:after {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 5px solid #ccc;
+}
+
+/* General */
+
+.default-text {
+	font-size: 30px;
+	text-align: justify;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.centre {
+	text-align: center;
+}
+
+.page-section {
+	position: relative;
+	width: 100%;
+	padding: 50px 100px;
+	background: #eee;
+}
+
+.wide {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.title {
+	color: #fff;
+}
+
+.white {
+	color: #fff;
+}
+
+.main-title {
+	margin: 50px auto 100px auto;
+}
+
+.main-title:after,
+.main-title:before {
+	content: "×";
+	color: #aaa;
+	margin: auto 15px;
+}
+
+#contact .main-title:after,
+#contact .main-title:before {
+	color: #ddd;
+}
+
+.title-lg {
+	font-size: 60px;
+}
+
+.tiny {
+	font-size: 15px;
+}
+
+.faded {
+	color: rgba(255, 255, 255, .5);
+}
+
+.inverted {
+	color: #333;
+}
+
+.cover-title {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	top: 50%;
+	margin-top: -150px;
+	color: rgba(255, 255, 255, .9);
+	z-index: 1;
+}
+
+.cover-title a.btn {
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 30px;
+	background: transparent;
+	color: #fff;
+}
+
+.cover-title a.btn:hover {
+	background: #fff;
+	color: #333;
+}
+
+/* Cover section */
+
+#cover {
+	height: 731px;
+	background: url('../img/bk.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#cover .mask {
+	width: 100%
+	z-index: -1;
+}
+
+#cover .mask:after {
+	content: "";
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAHUlEQVQIW2NkYGD4D8SM6DRIAAQwJDFUwhRRUQcALRkSBISGlPAAAAAASUVORK5CYII=") repeat top left;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: .5;
+}
+
+/* Location Section */
+
+#location {
+	background: #111;
+}
+
+/* Speakers section */
+
+.grid-item {
+	padding: 10px 15px;
+}
+
+.speaker-box {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0px 2px 5px 0.5px #d0d0d0;
+}
+
+.speaker-photo {
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+}
+
+.speaker-info {
+	padding: 15px;
+}
+
+.speaker-info .speaker-name {
+	margin-top: 0;
+}
+
+.speaker-info .speaker-description {
+	font-size: 18px;
+}
+
+/* Contact section */
+
+#contact {
+	background: #5bc0de;
+}
+
+#contact .title {
+	margin-bottom: 0px;
+}
+
+#contact .subtitle {
+	margin-bottom: 50px;
+}
+
+#contact .form-control {
+	width: 100%;
+	border: 1px #4aafcd;
+	border-radius: 4px;
+	box-shadow: 1px 1px 5px 0.5px #399ebc;
+}
+
+#contact .row {
+	margin-bottom: 25px;
+}
+
+.btn-send-message,
+.btn-send-message:focus {
+	text-transform: uppercase;
+	padding-left: 25px;
+	padding-right: 25px;
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 25px;
+	background: transparent;
+	outline: none;
+}
+
+.btn-send-message:hover {
+	background: #fff;
+	color: #333;
+}
+
+/* Footer Section */
+
+#footer {
+	background: #111;
+	color: #ccc;
+	padding-bottom: 25px;
+}
+
+.row {
+	margin-bottom: 10px;
+}
+
+.fb-like-box {
+	display: block;
+	height: auto;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#footer .others {
+	margin: 10px auto;
+}
+
+#footer .others .link {
+	margin-right: 10px;
+}
+
+.err {
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.contact-form .has-error {
+	border: 1px solid red;
+}
+
+.styled-modal {
+	border-radius: 4px;
+}

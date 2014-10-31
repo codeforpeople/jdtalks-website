@@ -1,5 +1,125 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.fb-root
+	script.
+		(function(d, s, id) {
+		var fb_root = document.createElement('div');
+		fb_root.classList.add('fb-root');
+		document.querySelector('body').appendChild(fb_root);
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=486611214805928&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container-fluid
+			.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li: a(href='#cover') Acasa
+					li: a(href='#about') Despre
+					li: a(href='#location') Locatie
+					li: a(href='#speakers') Speakeri
+					li: a(href='#contact') Contact
+	section#cover.page-section
+		.mask
+		.cover-title.centre.wide
+			h1.title.title-lg
+				b JDTalks 
+				span 10.14
+			h2.faded 22 Noiembrie - Braila
+			a.btn.btn-default.btn-lg Rezerva un bilet acum
+	section#about.page-section
+		h1.title.main-title.title-lg.wide.centre.inverted Ce este JDTalks?
+		p.default-text.
+			JDTalks este locul unde poveștile celor mai buni studenți devin motivație și inspirație pentru generațiile următoare, unde ideile și reușitele lor sunt împărtășite în forma unor discursuri scurte dar eficiente. Ce dorim să promovăm? Importanța implicării și beneficiile pe care le poți avea dacă alegi să nu te limitezi la curriculum-ul obișnuit.
+		p.default-text.
+			Cui se adresează JDTalks? Tuturor elevilor, dar în special celor care vor să lase ceva în urma lor, celor care vor să se implice și care vor să aducă o schimbare.
+		p.default-text.
+			Cum funcționează? JDTalks este o conferință. O dată la 3 luni, studenți care au ceva de povestit se strâng fizic sau online și împărtășesc din ideile lor elevilor pasionați și entuziasmați. Elevii au ocazia să cunoască o parte dintre speakeri, dar și să se cunoască între ei în pauzele de networking. JDTalks este un eveniment social și, nu în ultimul rând, este GRATUIT!
+	section#location.page-section
+		h1.title.main-title.title-lg.wide.centre Unde?
+	section#speakers.page-section
+		h1.title.main-title.title-lg.wide.centre.inverted Speakeri
+		.speakers-grid
+			.row
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/iacobov.jpg')
+						.speaker-info
+							h2.speaker-name Adela Alexandra Iacobov
+							p.speaker-description.
+								Secretary at York Rotaract Club, Deputy Secretary General of York Model United Nations Conference, Teaching Assistant at York Students in Schools
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/adamache.jpg')
+						.speaker-info
+							h2.speaker-name Teodora Adamache
+							p.speaker-description.
+								Fost presedinte al Consiliului Judetean al Elevilor, acum specialist in marketing. A lucrat pro-bono pentru cauze non-profit cu impact social, cultural si educational
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/radu.jpg')
+						.speaker-info
+							h2.speaker-name George Radu
+							p.speaker-description.
+								Secretar general in cadrul biroului de conducere al Ligii Studentilor din Universitatea Maritima din Constanta, student cosilier al Facultatii de Navigatie si Transport Naval
+			.row
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/damian.jpg')
+						.speaker-info
+							h2.speaker-name Ecaterina Damian
+							p.speaker-description.
+								Curioasa cu norma intreaga cu privire la tot (si in mod special la Computer Science). Momentan, isi ocupa (mai tot) timpul liber cu un Arduino
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/popa.jpg')
+						.speaker-info
+							h2.speaker-name Ioana Sabina Popa
+							p.speaker-description.
+								Membru in AIESEC Bucuresti, consilier in cadrul Asociatiei Studentilor la Stiinte Politice, fotograf
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/irina.jpg')
+						.speaker-info
+							h2.speaker-name Irina Lupu
+							p.speaker-description.
+								TBA
+	section#contact.page-section
+		h1.title.main-title.title-lg.wide.centre Hai să stăm de vorbă
+		h2.centre.white.subtitle.
+			Suntem prietenoși și sociabili. Întrebări, sugestii, reclamații sau un simplu "salut", nu ezita să ne scrii.
+		form(method='post').form-inline.contact-form
+			fieldset
+				.row
+					.col-md-6.col-lg-6.col-sm-12
+						.err: input.form-control.input-lg(type='text', name='name', id='name', placeholder='Numele tău...')
+					.col-md-6.col-lg-6.col-sm-12
+						.err: input.form-control.input-lg(type='email', name='email', id='email', placeholder='Adresa de e-mail...')
+				.row
+					.col-md-12
+						.err: textarea.form-control.input-lg(name='content', id='content', placeholder='Mesajul tău', rows='5')
+				.centre
+					button.btn.btn-lg.btn-send-message Trimite
+	section#footer.page-section
+		.row
+			.col-md-4.col-lg-4.col-sm-12
+				h4 Despre noi
+				p: a(href='http://www.jdl.ro') Junior Development Labs
+				p: a(href='http://www.jdl.ro/legal/privacy_policy.txt', target='_blank') Politica de securitate
+				p: a(href='http://www.jdl.ro/sponsorizari', target='_blank') Vreau să sponsorizez
+				p: a(href='mailto:contact@jdl.ro?subject=DONATIE', target='_blank') Donații
+			.col-md-4.col-lg-4.col-sm-12
+			.col-md-4.col-lg-4.col-sm-12
+				h4 Social
+				.fb-like-box(data-href='https://www.facebook.com/JuniorDevelopmentLabs', data-colorscheme='dark', data-show-faces='false', data-header='false', data-stream='false', data-show-border='true')
+				.others
+					a.link(href='http://www.google.com/+JdlRomania', target='_blank'): img(src='/img/social/google.png')
+					a.link(href='http://www.youtube.com/user/JuniorDevelopmentLabs', target='_blank'): img(src='/img/social/youtube.png')
+		p.gray.
+			© Junior Development Labs 2014. All rights reserved
+	.modal.fade.styled-modal#contact-modal(tab-index='-1', role='dialog', aria-hidden='true')
+		.modal-dialog
+			.modal-content
