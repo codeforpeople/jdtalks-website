@@ -1,6 +1,6 @@
 body, html {
 	margin: 0;
-	font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+	font: 14px "Open Sans";
 	width: 100%;
 }
 
@@ -79,6 +79,7 @@ body, html {
 
 .title {
 	color: #fff;
+	font-weight: 300;
 }
 
 .white {
@@ -202,6 +203,7 @@ body, html {
 
 .speaker-info .speaker-name {
 	margin-top: 0;
+	font-weight: 600;
 }
 
 .speaker-info .speaker-description {
@@ -220,6 +222,7 @@ body, html {
 
 #contact .subtitle {
 	margin-bottom: 50px;
+	font-weight: 300;
 }
 
 #contact .form-control {
