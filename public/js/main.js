@@ -41,7 +41,7 @@
 
 			$.ajax({
 				type: 'post',
-				url: 'http://www.jdl.ro/contact',
+				url: '/contact',
 				data: {
 					name: name,
 					email: email,
