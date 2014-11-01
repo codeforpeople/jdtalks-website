@@ -27,7 +27,7 @@ body, html {
 .nav.navbar-nav li a {
 	padding: 25px 30px;
 	color: #ccc;
-	font-size: 22px;
+	font-size: 1.5em;
 	text-transform: uppercase;
 	z-index: 100;
 }
@@ -50,7 +50,7 @@ body, html {
 /* General */
 
 .default-text {
-	font-size: 30px;
+	font-size: 2em;
 	text-align: justify;
 }
 
@@ -78,7 +78,7 @@ body, html {
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 1000px;
 }
 
 .wide {
@@ -113,11 +113,7 @@ body, html {
 }
 
 .title-lg {
-	font-size: 65px;
-}
-
-.tiny {
-	font-size: 15px;
+	font-size: 5em;
 }
 
 .faded {
@@ -148,7 +144,7 @@ body, html {
 }
 
 .cover-title a.btn {
-	font-size: 25px;
+	font-size: 1.8em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-top: 30px;
@@ -217,7 +213,7 @@ body, html {
 }
 
 .speaker-info {
-	padding: 15px;
+	padding: 1.3em;
 }
 
 .speaker-info .speaker-name {
@@ -226,7 +222,7 @@ body, html {
 }
 
 .speaker-info .speaker-description {
-	font-size: 18px;
+	font-size: 1.3em;
 }
 
 /* Contact section */
@@ -262,7 +258,7 @@ body, html {
 	padding-right: 25px;
 	border: 1px solid #fff;
 	color: #fff;
-	font-size: 25px;
+	font-size: 1.6em;
 	background: transparent;
 	outline: none;
 }
