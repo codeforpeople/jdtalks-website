@@ -33,13 +33,24 @@ block content
 	section#about.page-section: .wrapper
 		h1.title.main-title.title-lg.wide.centre.inverted Ce este JDTalks?
 		p.default-text.
-			JDTalks este locul unde poveștile celor mai buni studenți devin motivație și inspirație pentru generațiile următoare, unde ideile și reușitele lor sunt împărtășite în forma unor discursuri scurte dar eficiente. Ce dorim să promovăm? Importanța implicării și beneficiile pe care le poți avea dacă alegi să nu te limitezi la curriculum-ul obișnuit.
+			JDTalks este locul unde poveștile celor mai buni studenți devin motivație și inspirație pentru generațiile următoare, unde ideile și reușitele lor sunt împărtășite sub forma unor discursuri scurte dar eficiente. Ce dorim să promovăm? Importanța implicării și beneficiile pe care le poți avea dacă alegi să nu te limitezi la curriculum-ul obișnuit.
 		p.default-text.
 			Cui se adresează JDTalks? Tuturor elevilor, dar în special celor care vor să lase ceva în urma lor, celor care vor să se implice și care vor să aducă o schimbare.
 		p.default-text.
 			Cum funcționează? JDTalks este o conferință. O dată la 3 luni, studenți care au ceva de povestit se strâng fizic sau online și împărtășesc din ideile lor elevilor pasionați și entuziasmați. Elevii au ocazia să cunoască o parte dintre speakeri, dar și să se cunoască între ei în pauzele de networking. JDTalks este un eveniment social și, nu în ultimul rând, este GRATUIT!
 	section#location.page-section: .wrapper
 		h1.title.main-title.title-lg.wide.centre Unde?
+		h2.title Muzeul Brăilei - Secția de Istorie
+		h4.title Piața Traian nr. 3, 810153, Brăila, România
+		.row
+			.col-md-6.col-lg-6.col-sm-12
+				hr
+				p.white.default-text.
+					Secţia de istorie a evoluat odată cu instituţia muzeală din Brăila, însă din patrimoniul iniţial au parvenit doar două piese. Reorganizată după 1955 într-o formulă memorială dedicată revoluţionarului bulgar Hristo Botev, continuând cu foto-montaje dedicate marilor evenimente din istoria naţională, prioritatea având-o cercetările arheologice, în timp -datorită preocupărilor specialiştilor care s-au îndreptat spre studiul istoriei locale-, colecţiile constituite au permis organizarea mai multor expoziţii de bază, fiecare purtând amprenta perioadei când a fost realizată. 
+			.col-md-6.col-lg-6.col-sm-12.centre
+				#map-canvas
+				img.photo-preview(src='/img/muzeu.jpg')
+
 	section#speakers.page-section: .wrapper
 		h1.title.main-title.title-lg.wide.centre.inverted Speakeri
 		.speakers-grid
@@ -123,3 +134,22 @@ block content
 	.modal.fade.styled-modal#contact-modal(tab-index='-1', role='dialog', aria-hidden='true')
 		.modal-dialog
 			.modal-content
+	script(src='https://maps.googleapis.com/maps/api/js?v=3.exp')
+	script.
+		var map;
+		function initialize() {
+			var mapOptions = {
+				zoom: 17,
+				center: new google.maps.LatLng(45.272031, 27.974345)
+			};
+			
+			map = new google.maps.Map(document.getElementById('map-canvas'),
+						mapOptions);
+
+			marker = new google.maps.Marker({
+					position: mapOptions.center,
+					map: map,
+					title: "There you go!"
+				});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
