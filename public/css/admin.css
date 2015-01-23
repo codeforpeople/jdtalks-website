@@ -1,0 +1,17 @@
+/*Admin Panel*/
+#admin.row{
+	height: 100%; 
+	display:table-cell;
+	vertical-align: middle;
+}
+#admin.container{
+  height:100%;
+  display:table;
+  width: 100%;
+  padding: 0;
+  background-color: #dddddd;
+}
+#admin.centering {
+  float:none;
+  margin:0 auto;
+}
