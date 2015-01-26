@@ -26,17 +26,21 @@ body, html {
 .nav.navbar-nav li a {
 	padding: 25px 30px;
 	color: #ccc;
-	font-size: 1.5em;
+	font-size: 1.7em;
+	/*font-weight: bold;*/
 	text-transform: uppercase;
+	letter-spacing: 2px;
 	z-index: 100;
 }
 
-.nav.navbar-nav li a:hover {
+.nav.navbar-nav li a:hover,
+.nav.navbar-nav li a:focus {
 	color: #fff;
 	text-decoration: none;
 }
 
-.nav.navbar-nav li a:hover:after {
+.nav.navbar-nav li a:hover:after,
+.nav.navbar-nav li a:focus:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -237,17 +241,25 @@ body, html {
 	font-size: 1.3em;
 }
 
+/* Tickets section */
+
+#tickets {
+	background: #42002D;
+}
+
 /* Contact section */
 
 #contact {
 	background: #5bc0de;
 }
 
-#contact .title {
+#contact .title,
+#tickets .title {
 	margin-bottom: 0px;
 }
 
-#contact .subtitle {
+#contact .subtitle,
+#tickets .subtitle {
 	margin-bottom: 50px;
 	font-weight: 300;
 }
