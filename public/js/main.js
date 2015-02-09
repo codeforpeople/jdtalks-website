@@ -37,7 +37,7 @@
 		if (safe) {
 
 			$('.btn-send-message').text('Se trimite...');
-			$('.contact-form fieldset').attr('disabled', '');
+			$('.contact-form').attr('disabled', '');
 
 			$.ajax({
 				type: 'post',
@@ -63,15 +63,35 @@
 	};
 
 	var init = function () {
-		$('nav ul li a, nav ul li span, ul.nav li span, ul.nav li a, .btn.btn-link').click(function(e){
+        var owl = $("#owl-demo");
+ 
+        owl.owlCarousel({
+            items : 5,
+            autoPlay : 3000,
+            stopOnHover : true,
+            paginationSpeed : 1000,
+            goToFirstSpeed : 2000,
+            lazyLoad : true,
+            dots: false,
+            autoHeight : true
+        });
+          
+		$('nav ul li a, nav ul li span, ul.nav li span, ul.nav li a, .btn.btn-link, .menu a').click(function(e){
+            e.preventDefault();
 			$('html, body').animate({
-				scrollTop: $($.attr(this, 'href')).offset().top - 70
+				scrollTop: $($.attr(this, 'href')).offset().top - $('.menu').innerHeight()
 			}, 500);
-			e.preventDefault();
 			return false;
 		});
-
+        
+        $('#header .other li').click(function(){
+            clearTimeout(timeslider);
+            slidechange($('#header .other li').index(this));
+        });
+        
 		$(document).on('click', '.btn-send-message', sendMessage);
+        
+        $('.owl-controls.clickable').remove();
 	}
 
 	var main = function () {

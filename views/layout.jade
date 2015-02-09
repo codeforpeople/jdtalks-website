@@ -1,14 +1,25 @@
 doctype html
 html
-	head
-		title= title
-		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,600&subset=latin,latin-ext', type='text/css')
-		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,latin-ext', type='text/css')
-		link(rel='stylesheet', href='/css/bootstrap.css')
-		link(rel='stylesheet', href='/css/style.css')
-	body
-		block content
-		script(src='/js/jquery.js')
-		script(src='/js/bootstrap.js')
-		script(src='/js/main.js')
-		script(src='/js/ga.js')
+    head
+        title= title
+        meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+        link(rel="stylesheet", href="/css/owl-carousel/owl.carousel.css")
+        link(rel="stylesheet", href="/css/owl-carousel/owl.theme.css")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        div.menu
+            ul
+                li: a(href="#header") JDTalks
+                li: a(href="#about") Despre
+                li: a(href="#place") Locatie
+                li: a(href="#speakers") Speakeri
+                li: a(href="#tickets") Vreau sa particip
+                li: a(href="#gallery") Galerie
+                li: a(href="#contact") Contact
+        block content
+        script(src='/js/jquery.js')
+        script(src="/js/random_slide.js")
+        script(src='/js/bootstap.js')
+        script(src='/js/assets/owl.carousel.js')
+        script(src='/js/main.js')
+        script(src='/js/ga.js')

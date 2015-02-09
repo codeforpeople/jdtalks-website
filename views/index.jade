@@ -1,162 +1,154 @@
-extends layout
+extends layout.jade
 
 block content
-	.fb-root
-	script.
-		(function(d, s, id) {
-		var fb_root = document.createElement('div');
-		fb_root.classList.add('fb-root');
-		document.querySelector('body').appendChild(fb_root);
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=486611214805928&version=v2.0";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	nav.navbar.navbar-default.navbar-fixed-top
-		.container-fluid
-			.collapse.navbar-collapse
-				ul.nav.navbar-nav
-					li: a(href='#cover') Acasă
-					li: a(href='#about') Despre
-					li: a(href='#location') Locație
-					li: a(href='#speakers') Speakeri
-					li: a(href='#tickets') Vreau să particip
-					li: a(href='#contact') Contact
-	section#cover.page-section: .wrapper
-		.mask
-		.cover-title.centre.wide
-			h1.title.title-lg
-				b JDTalks 
-				span.date 02.15
-			h2.faded 21 Februarie - Brăila
-			a.btn.btn-default.btn-lg(href='http://jdtalks0215.eventbrite.co.uk', target='_blank') Rezervă un bilet acum
-	section#about.page-section: .wrapper
-		h1.title.main-title.title-lg.wide.centre.inverted Ce este JDTalks?
-		p.default-text.
-			JDTalks este locul unde poveștile celor mai buni studenți devin motivație și inspirație pentru generațiile următoare, unde ideile și reușitele lor sunt împărtășite sub forma unor discursuri scurte dar eficiente. Ce dorim să promovăm? Importanța implicării și beneficiile pe care le poți avea dacă alegi să nu te limitezi la curriculum-ul obișnuit.
-		p.default-text.
-			Cui se adresează JDTalks? Tuturor elevilor, dar în special celor care vor să lase ceva în urma lor, celor care vor să se implice și care vor să aducă o schimbare.
-		p.default-text.
-			Cum funcționează? JDTalks este o conferință. O dată la 3 luni, studenți care au ceva de povestit se strâng fizic sau online și împărtășesc din ideile lor elevilor pasionați și entuziasmați. Elevii au ocazia să cunoască o parte dintre speakeri, dar și să se cunoască între ei în pauzele de networking. JDTalks este un eveniment social și, nu în ultimul rând, este GRATUIT!
-	section#location.page-section: .wrapper
-		h1.title.main-title.title-lg.wide.centre Unde?
-		h2.title Facultatea de Inginerie, Universitatea Dunărea de Jos
-		h4.title Calea Călărașilor nr. 29, 810017, Brăila, România
-		.row
-			.col-md-6.col-lg-6.col-sm-12
-				hr
-				p.white.default-text.
-					Fostul Palat Administrativ și Judecătoresc din orașul Brăila este situat pe Calea Călărașilor. Acesta a fost construit la sfârșitul secolului al XIX-lea și a găzduit inițial Tribunalul și Prefectura orașului Brăila, iar în prezent reprezintă clădirea Universității "Dunărea de Jos", Facultatea de Inginerie.
-			.col-md-6.col-lg-6.col-sm-12.centre
-				#map-canvas
-				img.photo-preview(src='/img/muzeu.jpg')
-
-	section#speakers.page-section: .wrapper
-		h1.title.main-title.title-lg.wide.centre.inverted Speakeri
-		.speakers-grid
-			.row
-				.col-md-4.col-lg-4.col-sm-12.grid-item
-					.speaker-box
-						img.speaker-photo(src='/img/speakers/marius.jpg')
-						.speaker-info
-							h2.speaker-name Marius Coțofană
-							p.speaker-description.
-								Marius este student al Facultății de Automatică și Calculatoare - UPB și președinte al asociaței ROSEdu, asociație cu o gamă largă de proiecte cu și pentru studenți: WoUSO, LPIC, Community Development Lab. 
-				.col-md-4.col-lg-4.col-sm-12.grid-item
-					.speaker-box
-						img.speaker-photo(src='/img/speakers/georgiana.jpg')
-						.speaker-info
-							h2.speaker-name Georgiana Mănăilă
-							p.speaker-description.
-								Georgiana este studentă a Universității de Medicină și Farmacie ”Carol Davila” din București, Facultatea de Medicină Generală, dar cu o mare pasiune pentru muzica folclorică și un talent extraordinar. În plan muzical, a colaborat cu diverse trupe din Romania și din Serbia, printre care și cunoscuta trupă Subcarpați.
-				.col-md-4.col-lg-4.col-sm-12.grid-item
-					.speaker-box
-						img.speaker-photo(src='/img/speakers/cioroiu.jpg')
-						.speaker-info
-							h2.speaker-name Ștefan-Cosmin Cioroiu
-							p.speaker-description.
-								Ștefan este student al Facultății de Design și Tehnologie KEA din Copenhaga cu o foarte mare pasiune pentru artă, având o imaginație bogată și o minte creativă. El ne va vorbi atât despre viața de student, în special în Danemarca, cât și despre posibilitatea de a găsi un job.
-			.row
-				.col-md-4.col-lg-4.col-sm-12.grid-item
-					.speaker-box
-						img.speaker-photo(src='/img/speakers/wait_for_it.jpg')
-						.speaker-info
-							h2.speaker-name În curând
-							p.speaker-description.
-								Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
-				.col-md-4.col-lg-4.col-sm-12.grid-item
-					.speaker-box
-						img.speaker-photo(src='/img/speakers/wait_for_it.jpg')
-						.speaker-info
-							h2.speaker-name În curând
-							p.speaker-description.
-								Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
-				.col-md-4.col-lg-4.col-sm-12.grid-item
-					.speaker-box
-						img.speaker-photo(src='/img/speakers/wait_for_it.jpg')
-						.speaker-info
-							h2.speaker-name În curând
-							p.speaker-description.
-								Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
-	section#tickets.page-section: .wrapper
-		h1.title.main-title.title-lg.wide.centre Vino și tu la conferință
-		h2.centre.white.subtitle.
-			Totul este gratuit. Nimic de pierdut, multe de câștigat!
-		div.
-			<div style="width:100%; text-align:left;" ><iframe  src="//eventbrite.co.uk/tickets-external?eid=15484997043&ref=etckt" frameborder="0" height="400px" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.co.uk/r/etckt">Online Ticketing</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="https://jdtalks0215.eventbrite.co.uk/?ref=etckt">JDTalks 02.15</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.co.uk?ref=etckt">Eventbrite</a></div></div>
-	section#contact.page-section: .wrapper
-		h1.title.main-title.title-lg.wide.centre Hai să stăm de vorbă
-		h2.centre.white.subtitle.
-			Suntem prietenoși și sociabili. Întrebări, sugestii, reclamații sau un simplu "salut", nu ezita să ne scrii.
-		form(method='post').form-inline.contact-form
-			fieldset
-				.row
-					.col-md-6.col-lg-6.col-sm-12
-						.err: input.form-control.input-lg(type='text', name='name', id='name', placeholder='Numele tău...')
-					.col-md-6.col-lg-6.col-sm-12
-						.err: input.form-control.input-lg(type='email', name='email', id='email', placeholder='Adresa de e-mail...')
-				.row
-					.col-md-12
-						.err: textarea.form-control.input-lg(name='content', id='content', placeholder='Mesajul tău', rows='5')
-				.centre
-					button.btn.btn-lg.btn-send-message Trimite
-	section#footer.page-section
-		.row
-			.col-md-4.col-lg-4.col-sm-12
-				h4 Despre noi
-				p: a(href='http://www.jdl.ro') Junior Development Labs
-				p: a(href='http://www.jdl.ro/legal/privacy_policy.txt', target='_blank') Politica de securitate
-				p: a(href='http://www.jdl.ro/sponsorizari', target='_blank') Vreau să sponsorizez
-				p: a(href='mailto:contact@jdl.ro?subject=DONATIE', target='_blank') Donații
-			.col-md-4.col-lg-4.col-sm-12
-			.col-md-4.col-lg-4.col-sm-12
-				h4 Social
-				.fb-like-box(data-href='https://www.facebook.com/JuniorDevelopmentLabs', data-colorscheme='dark', data-show-faces='false', data-header='false', data-stream='false', data-show-border='true')
-				.others
-					a.link(href='http://www.google.com/+JdlRomania', target='_blank'): img(src='/img/social/google.png')
-					a.link(href='http://www.youtube.com/user/JuniorDevelopmentLab', target='_blank'): img(src='/img/social/youtube.png')
-		p.gray.
-			© Junior Development Labs 2014-2015. All rights reserved
-	.modal.fade.styled-modal#contact-modal(tab-index='-1', role='dialog', aria-hidden='true')
-		.modal-dialog
-			.modal-content
-	script(src='https://maps.googleapis.com/maps/api/js?v=3.exp')
-	script.
-		var map;
-		function initialize() {
-			var mapOptions = {
-				zoom: 17,
-				center: new google.maps.LatLng(45.267243, 27.973077)
-			};
-			
-			map = new google.maps.Map(document.getElementById('map-canvas'),
-						mapOptions);
-
-			marker = new google.maps.Marker({
-					position: mapOptions.center,
-					map: map,
-					title: "There you go!"
-				});
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
+    div#header.block
+        div.partial_width
+            div.bgimg(style="background-image: url('/img/header/1.png')")
+            div.left_text
+                div.title.
+                    JDTalks 02.15
+                div.date.
+                    21 Februarie - Brăila
+                a.more.btn-default.btn(href="http://jdtalks0215.eventbrite.co.uk/") Rezervă un bilet
+                div.text
+        div.other
+            div#owl-demo.owl-carousel.owl-theme
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/9497_318944498301445_4456891924332951711_n.jpg?oh=59e163f649897edfb8607211f2bf048d&oe=555B7D72&__gda__=1435626923_e5bbe3fee89fcaf53bbefd38dcb735a1")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10259989_318944411634787_4628547191729172493_n.jpg?oh=ab9cb002b31e144f6883f0cf72c2ddf4&oe=55543767&__gda__=1432372191_26527ee195c8c4c5a3f5567a135715dd")
+                div.item: img.lazyOwl(data-src="https://scontent-b-vie.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10730918_318944281634800_7886684145916306713_n.jpg?oh=ab6e88e0cb0b1236ef629497a8ee5d2a&oe=554B721B")
+                div.item: img.lazyOwl(data-src="https://scontent-a-vie.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10426749_318944201634808_7955405428619860426_n.jpg?oh=67e7a54758934573cc86f8f052d66d15&oe=554BD4D2")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/1505518_318943864968175_8742676015350364718_n.jpg?oh=cc9087a5a19bd92dcfe81cca7e87434f&oe=5591DFFD&__gda__=1431393126_34efd50d0cb4512ebc677c62d1f9cbd3")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/1533855_318942834968278_1091249313727695246_n.jpg?oh=e0f062908051e4835a06d5c89dfe1b48&oe=555A148E&__gda__=1432287567_6b26814302cfe1d3fb16fb16185c4e6e")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10473541_318943521634876_8391759926446033004_n.jpg?oh=93b2d6d250f2fb98059a6e9edbb66479&oe=55515570&__gda__=1430820122_502d42a6104b66a0f94b4e1925b8d52b")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/10371423_318943008301594_7885670626949074190_n.jpg?oh=0200954507ec58724b70e83e265fc742&oe=555AC273&__gda__=1431719930_98b90332c4cedf065ea8c85ee422b397")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10402798_318942604968301_1277888715612784984_n.jpg?oh=e7f32bddbac959de6b938ade9c00a37a&oe=554868FA&__gda__=1435736464_70c067bc07efff8c7ff404be0efb6b2b")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10574480_284560481739847_3461973254641656866_n.jpg?oh=6ddb58c245b0d21d85bdc8b0c161d6c8&oe=55663C6C&__gda__=1430794246_1ca1468eca69295ed0682b2ff2c8300d")
+                div.item: img.lazyOwl(data-src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10653825_284560261739869_1830107125252045163_n.jpg?oh=62372a2fea4cc46a49fa3703aed2804f&oe=55675F2C&__gda__=1432136774_78ac4f825b51d46627df6959267d8173")
+        div.clr
+    div#about.block
+        div.partial_width1280
+            div.title.
+                Ce este JDL?
+            div.content.partial_width
+                div.text JDTalks este locul unde poveștile celor mai buni studenți devin motivație și inspirație pentru generațiile următoare, unde ideile și reușitele lor sunt împărtășite sub forma unor discursuri scurte dar eficiente. Ce dorim să promovăm? Importanța implicării și beneficiile pe care le poți avea dacă alegi să nu te limitezi la curriculum-ul obișnuit.
+                    p Cui se adresează JDTalks? Tuturor elevilor, dar în special celor care vor să lase ceva în urma lor, celor care vor să se implice și care vor să aducă o schimbare.
+                    p Cum funcționează? JDTalks este o conferință. O dată la 3 luni, studenți care au ceva de povestit se strâng fizic sau online și împărtășesc din ideile lor elevilor pasionați și entuziasmați. Elevii au ocazia să cunoască o parte dintre speakeri, dar și să se cunoască între ei în pauzele de networking. JDTalks este un eveniment social și, nu în ultimul rând, este GRATUIT!
+        div.clr
+    div#place.block.bg(style="background-image: url('../img/map.jpg');")
+        div.partial_width
+            div.title.
+                Unde?
+            div.content
+                div.text
+                    div.infobox
+                        div.title.
+                            Facultatea de Inginerie, Universitatea Dunărea de Jos
+                        div.subtitle.
+                            Calea Călărașilor nr. 29, 810017, Brăila, România
+                        hr
+                        div.text.left.
+                            Fostul Palat Administrativ și Judecătoresc din orașul Brăila este situat pe Calea Călărașilor. Acesta a fost construit la sfârșitul secolului al XIX-lea și a găzduit inițial Tribunalul și Prefectura orașului Brăila, iar în prezent reprezintă clădirea Universității "Dunărea de Jos", Facultatea de Inginerie.
+                        img.right(src="/img/muzeu.jpg")
+                    div.clr
+                div#map.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.037981369563!2d27.973076999999996!3d45.267243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b729eb85209695%3A0x46cf418888a2c949!2sFacultatea+de+Inginerie%2C+Universitatea+Dun%C4%83rea+de+Jos!5e0!3m2!1sro!2sro!4v1423394944809" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        div.clr
+    div#speakers.block
+        div.partial_width
+            div.title.
+                Speakeri
+            div.content
+                div.speaker
+                    img(src="/img/speakers/marius.jpg")
+                    div.infospeaker
+                        div.name.
+                            Marius Coțofană
+                        div.text.
+                            Marius este student al Facultății de Automatică și Calculatoare - UPB și președinte al asociaței ROSEdu, asociație cu o gamă largă de proiecte cu și pentru studenți: WoUSO, LPIC, Community Development Lab.
+                div.speaker
+                    img(src="/img/speakers/georgiana.jpg")
+                    div.infospeaker
+                        div.name.
+                            Georgiana Mănăilă
+                        div.text.
+                            Georgiana este studentă a Universității de Medicină și Farmacie ”Carol Davila” din București, Facultatea de Medicină Generală, dar cu o mare pasiune pentru muzica folclorică și un talent extraordinar. În plan muzical, a colaborat cu diverse trupe din Romania și din Serbia, printre care și cunoscuta trupă Subcarpați.
+                div.speaker
+                    img(src="/img/speakers/cioroiu.jpg")
+                    div.infospeaker
+                        div.name.
+                            Ștefan-Cosmin Cioroiu
+                        div.text.
+                            Ștefan este student al Facultății de Design și Tehnologie KEA din Copenhaga cu o foarte mare pasiune pentru artă, având o imaginație bogată și o minte creativă. El ne va vorbi atât despre viața de student, în special în Danemarca, cât și despre posibilitatea de a găsi un job.
+                div.clr
+                div.speaker
+                    img(src="/img/speakers/wait_for_it.jpg")
+                    div.infospeaker
+                        div.name.
+                            În curând
+                        div.text.
+                            Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
+                div.speaker
+                    img(src="/img/speakers/wait_for_it.jpg")
+                    div.infospeaker
+                        div.name.
+                            În curând
+                        div.text.
+                            Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
+                div.speaker
+                    img(src="/img/speakers/wait_for_it.jpg")
+                    div.infospeaker
+                        div.name.
+                            În curând
+                        div.text.
+                            Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
+                div.clr
+        div.clr
+    div#tickets.block.bg
+        div.partial_width
+            div.title.
+                Vino și tu la conferință
+            div.subtitle.
+                Totul este gratuit. Nimic de pierdut, multe de câștigat!
+            div.content.
+                <div style="width:100%; text-align:left;" ><iframe src="//eventbrite.co.uk/tickets-external?eid=15484997043&ref=etckt" frameborder="0" height="400px" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.co.uk/r/etckt">Online Ticketing</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="https://jdtalks0215.eventbrite.co.uk/?ref=etckt">JDTalks 02.15</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.co.uk?ref=etckt">Eventbrite</a></div></div>
+        div.clr
+    div#gallery.block.bg.col2
+        div.partial_width
+            div.content
+                div.boxalbum
+                    div.album
+                        a(src="#"): div: img(src="https://scontent-a-vie.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10343519_318943188301576_6947532041344546994_n.jpg?oh=4b1a416a4c92070282816c54126b365e&oe=55506700")
+                        div.text JDTalks 14.11
+                div.boxalbum
+                    div.album
+                        a(src="#"): div: img(src="https://scontent-a-vie.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10653386_284559038406658_1385402605632020419_n.jpg?oh=6a30f9ea9295f2bdef65edc4c0bd10ab&oe=55548D5B")
+                        div.text JDTalks 14.08
+                div.clr
+    div#contact.block.bglight
+        div.partial_width
+            div.title.
+                Hai să stăm de vorbă
+            div.subtitle.
+                Suntem prietenoși și sociabili.<br>Întrebări, sugestii, reclamații sau un simplu "salut", nu ezita să ne scrii.
+            div.content
+                form(method='post').form-inline.contact-form
+                        input.form-control.input-lg(type='text', name='name', id='name', placeholder='Numele tau...')
+                        input.form-control.input-lg(type='email', name='email', id='email', placeholder='Adresa de e-mail...')
+                        textarea.form-control.input-lg(name='content', id='content', placeholder='Mesajul tau', rows='5')
+                        button.btn.btn-lg.btn-send-message Trimite
+        div.clr
+    div#footer.block
+        div.menu
+            div.partial_width
+                ul
+                    li: a(src="/") Junior Development Labs
+                    li: a(src="http://www.jdl.ro/legal/privacy_policy.txt") Politica de securitate
+                    li: a(src="http://www.jdl.ro/sponsorizari") Vreau sa sponsorizez
+                    li: a(src="contact@jdl.ro") Donatii
+        div.partial_width
+            div.social
+                div.
+                    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=859678627416695" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+                div: a(href="http://www.google.com/+JdlRomania"): img(src="/img/social/google.png")
+                div: a(href="http://www.youtube.com/user/JuniorDevelopmentLab"): img(src="/img/social/youtube.png")
+            div.copyright &copy; Junior Development Labs 2014 - 2015. All rights reserved

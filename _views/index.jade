@@ -1,0 +1,162 @@
+extends layout
+
+block content
+	.fb-root
+	script.
+		(function(d, s, id) {
+		var fb_root = document.createElement('div');
+		fb_root.classList.add('fb-root');
+		document.querySelector('body').appendChild(fb_root);
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=486611214805928&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container-fluid
+			.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li: a(href='#cover') Acasă
+					li: a(href='#about') Despre
+					li: a(href='#location') Locație
+					li: a(href='#speakers') Speakeri
+					li: a(href='#tickets') Vreau să particip
+					li: a(href='#contact') Contact
+	section#cover.page-section: .wrapper
+		.mask
+		.cover-title.centre.wide
+			h1.title.title-lg
+				b JDTalks 
+				span.date 02.15
+			h2.faded 21 Februarie - Brăila
+			a.btn.btn-default.btn-lg(href='http://jdtalks0215.eventbrite.co.uk', target='_blank') Rezervă un bilet acum
+	section#about.page-section: .wrapper
+		h1.title.main-title.title-lg.wide.centre.inverted Ce este JDTalks?
+		p.default-text.
+			JDTalks este locul unde poveștile celor mai buni studenți devin motivație și inspirație pentru generațiile următoare, unde ideile și reușitele lor sunt împărtășite sub forma unor discursuri scurte dar eficiente. Ce dorim să promovăm? Importanța implicării și beneficiile pe care le poți avea dacă alegi să nu te limitezi la curriculum-ul obișnuit.
+		p.default-text.
+			Cui se adresează JDTalks? Tuturor elevilor, dar în special celor care vor să lase ceva în urma lor, celor care vor să se implice și care vor să aducă o schimbare.
+		p.default-text.
+			Cum funcționează? JDTalks este o conferință. O dată la 3 luni, studenți care au ceva de povestit se strâng fizic sau online și împărtășesc din ideile lor elevilor pasionați și entuziasmați. Elevii au ocazia să cunoască o parte dintre speakeri, dar și să se cunoască între ei în pauzele de networking. JDTalks este un eveniment social și, nu în ultimul rând, este GRATUIT!
+	section#location.page-section: .wrapper
+		h1.title.main-title.title-lg.wide.centre Unde?
+		h2.title Facultatea de Inginerie, Universitatea Dunărea de Jos
+		h4.title Calea Călărașilor nr. 29, 810017, Brăila, România
+		.row
+			.col-md-6.col-lg-6.col-sm-12
+				hr
+				p.white.default-text.
+					Fostul Palat Administrativ și Judecătoresc din orașul Brăila este situat pe Calea Călărașilor. Acesta a fost construit la sfârșitul secolului al XIX-lea și a găzduit inițial Tribunalul și Prefectura orașului Brăila, iar în prezent reprezintă clădirea Universității "Dunărea de Jos", Facultatea de Inginerie.
+			.col-md-6.col-lg-6.col-sm-12.centre
+				#map-canvas
+				img.photo-preview(src='/img/muzeu.jpg')
+
+	section#speakers.page-section: .wrapper
+		h1.title.main-title.title-lg.wide.centre.inverted Speakeri
+		.speakers-grid
+			.row
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/marius.jpg')
+						.speaker-info
+							h2.speaker-name Marius Coțofană
+							p.speaker-description.
+								Marius este student al Facultății de Automatică și Calculatoare - UPB și președinte al asociaței ROSEdu, asociație cu o gamă largă de proiecte cu și pentru studenți: WoUSO, LPIC, Community Development Lab. 
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/georgiana.jpg')
+						.speaker-info
+							h2.speaker-name Georgiana Mănăilă
+							p.speaker-description.
+								Georgiana este studentă a Universității de Medicină și Farmacie ”Carol Davila” din București, Facultatea de Medicină Generală, dar cu o mare pasiune pentru muzica folclorică și un talent extraordinar. În plan muzical, a colaborat cu diverse trupe din Romania și din Serbia, printre care și cunoscuta trupă Subcarpați.
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/wait_for_it.jpg')
+						.speaker-info
+							h2.speaker-name În curând
+							p.speaker-description.
+								Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
+			.row
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/wait_for_it.jpg')
+						.speaker-info
+							h2.speaker-name În curând
+							p.speaker-description.
+								Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/wait_for_it.jpg')
+						.speaker-info
+							h2.speaker-name În curând
+							p.speaker-description.
+								Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
+				.col-md-4.col-lg-4.col-sm-12.grid-item
+					.speaker-box
+						img.speaker-photo(src='/img/speakers/wait_for_it.jpg')
+						.speaker-info
+							h2.speaker-name În curând
+							p.speaker-description.
+								Va urma! Rămâi la curent cu pagina de Facebook pentru a afla cine este acest speaker!
+	section#tickets.page-section: .wrapper
+		h1.title.main-title.title-lg.wide.centre Vino și tu la conferință
+		h2.centre.white.subtitle.
+			Totul este gratuit. Nimic de pierdut, multe de câștigat!
+		div.
+			<div style="width:100%; text-align:left;" ><iframe  src="//eventbrite.co.uk/tickets-external?eid=15484997043&ref=etckt" frameborder="0" height="400px" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.co.uk/r/etckt">Online Ticketing</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="https://jdtalks0215.eventbrite.co.uk/?ref=etckt">JDTalks 02.15</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.co.uk?ref=etckt">Eventbrite</a></div></div>
+	section#contact.page-section: .wrapper
+		h1.title.main-title.title-lg.wide.centre Hai să stăm de vorbă
+		h2.centre.white.subtitle.
+			Suntem prietenoși și sociabili. Întrebări, sugestii, reclamații sau un simplu "salut", nu ezita să ne scrii.
+		form(method='post').form-inline.contact-form
+			fieldset
+				.row
+					.col-md-6.col-lg-6.col-sm-12
+						.err: input.form-control.input-lg(type='text', name='name', id='name', placeholder='Numele tău...')
+					.col-md-6.col-lg-6.col-sm-12
+						.err: input.form-control.input-lg(type='email', name='email', id='email', placeholder='Adresa de e-mail...')
+				.row
+					.col-md-12
+						.err: textarea.form-control.input-lg(name='content', id='content', placeholder='Mesajul tău', rows='5')
+				.centre
+					button.btn.btn-lg.btn-send-message Trimite
+	section#footer.page-section
+		.row
+			.col-md-4.col-lg-4.col-sm-12
+				h4 Despre noi
+				p: a(href='http://www.jdl.ro') Junior Development Labs
+				p: a(href='http://www.jdl.ro/legal/privacy_policy.txt', target='_blank') Politica de securitate
+				p: a(href='http://www.jdl.ro/sponsorizari', target='_blank') Vreau să sponsorizez
+				p: a(href='mailto:contact@jdl.ro?subject=DONATIE', target='_blank') Donații
+			.col-md-4.col-lg-4.col-sm-12
+			.col-md-4.col-lg-4.col-sm-12
+				h4 Social
+				.fb-like-box(data-href='https://www.facebook.com/JuniorDevelopmentLabs', data-colorscheme='dark', data-show-faces='false', data-header='false', data-stream='false', data-show-border='true')
+				.others
+					a.link(href='http://www.google.com/+JdlRomania', target='_blank'): img(src='/img/social/google.png')
+					a.link(href='http://www.youtube.com/user/JuniorDevelopmentLab', target='_blank'): img(src='/img/social/youtube.png')
+		p.gray.
+			© Junior Development Labs 2014-2015. All rights reserved
+	.modal.fade.styled-modal#contact-modal(tab-index='-1', role='dialog', aria-hidden='true')
+		.modal-dialog
+			.modal-content
+	script(src='https://maps.googleapis.com/maps/api/js?v=3.exp')
+	script.
+		var map;
+		function initialize() {
+			var mapOptions = {
+				zoom: 17,
+				center: new google.maps.LatLng(45.267243, 27.973077)
+			};
+			
+			map = new google.maps.Map(document.getElementById('map-canvas'),
+						mapOptions);
+
+			marker = new google.maps.Marker({
+					position: mapOptions.center,
+					map: map,
+					title: "There you go!"
+				});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
